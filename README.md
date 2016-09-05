@@ -1,1 +1,1 @@
-# Run npm install and after that boiler plate is reday for use.
+# Run npm install and after that boiler plate is ready for use.
