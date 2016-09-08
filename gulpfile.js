@@ -19,11 +19,11 @@ gulp.task('source-concat', function () {
             'node_modules/angular/angular.min.js',
             'node_modules/angular-animate/angular-animate.min.js',
             'node_modules/angular-aria/angular-aria.min.js',
-            'node_modules/angular-material/angular-material.min.js',
             'node_modules/angular-ui-router/release/angular-ui-router.min.js',
             'node_modules/moment/moment.js',
             'node_modules/moment/locale/de.js',
             'node_modules/angular-moment/angular-moment.min.js',
+            'node_modules/material-design-lite/material.min.js',
             'assets/js/lodash.min.js',
             'assets/js/lodash.core.min.js'
         ])
@@ -38,10 +38,22 @@ gulp.task('make-js', function () {
         .pipe(jsmin())
         .pipe(gulp.dest('app'));
 });
-
-gulp.task('make-css', function () {
-    gulp.src('app/**/scss/*.scss')
+gulp.task('make-sourcecss', function () {
+    gulp.src([
+        'node_modules/material-design-lite/material.min.css'
+    ])
         .pipe(sass().on('error', sass.logError))
         .pipe(cssmin())
+        .pipe(concat('source.css'))
+        .pipe(gulp.dest('assets/css'));
+});
+
+gulp.task('make-css', function () {
+    gulp.src([
+        'app/**/scss/*.scss'
+    ])
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cssmin())
+        .pipe(concat('app.css'))
         .pipe(gulp.dest('assets/css'));
 });
