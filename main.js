@@ -3,23 +3,16 @@
  */
 var cjs = angular.module('myApp', ['ui.router']);
 
-cjs.config(function ($stateProvider, $urlRouterProvider) {
+cjs.controller('mainController',['$scope', function ($scope) {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-    // For any unmatched url, send to /route1
-    $urlRouterProvider.otherwise("/home");
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
 
-    var homeState = {
-        name: 'home',
-        url: '/home',
-        templateUrl: 'app/components/home/html/home.html'
-    };
-
-    var contactState = {
-        name: 'contact',
-        url: '/contact',
-        templateUrl: 'app/components/home/html/contact.html'
-    };
-
-    $stateProvider.state(homeState);
-    $stateProvider.state(contactState);
-});
+    $scope.mainTest = 'Hello world';
+}]);

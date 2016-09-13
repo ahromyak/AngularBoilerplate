@@ -14,6 +14,29 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     angularProtractor = require('gulp-angular-protractor');
 
+var source = {
+    css:[
+        'app/**/scss/*.scss'
+    ],
+    js:[
+        'main.js',
+        'app/components/routes.app.js',
+        'app/**/**/js/*.js'
+    ]
+};
+
+gulp.task('protractor', function () {
+    gulp.src(['/tests/*.js'])
+        .pipe(angularProtractor({
+            'configFile': 'protractor.config.js',
+            'autoStartStopServer': true,
+            'debug': false
+        }))
+        .on('error', function (e) {
+            throw e;
+        })
+});
+
 gulp.task('source-concat', function () {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
@@ -34,11 +57,12 @@ gulp.task('source-concat', function () {
 });
 
 gulp.task('make-js', function () {
-    gulp.src(['main.js', 'app/**/js/*.js'])
+    gulp.src(source.js)
         .pipe(concat('app.js'))
         .pipe(jsmin())
         .pipe(gulp.dest('assets/js/'));
 });
+
 gulp.task('make-sourcecss', function () {
     gulp.src([
         'node_modules/material-design-lite/material.min.css'
@@ -50,24 +74,15 @@ gulp.task('make-sourcecss', function () {
 });
 
 gulp.task('make-css', function () {
-    gulp.src([
-        'app/**/scss/*.scss'
-    ])
+    gulp.src(source.css)
         .pipe(sass().on('error', sass.logError))
         .pipe(cssmin())
         .pipe(concat('app.css'))
         .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('protractor', function () {
-    gulp.src(['/tests/*.js'])
-        .pipe(angularProtractor({
-            'configFile': 'protractor.config.js',
-            'autoStartStopServer': true,
-            'debug': false
-        }))
-        .on('error', function (e) {
-            throw e;
-        })
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+    gulp.watch(source.css, ['make-css']);
+    gulp.watch(source.js, ['make-js']);
 });
-

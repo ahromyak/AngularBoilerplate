@@ -1,0 +1,1 @@
+.accordion{color:#757575;cursor:pointer;padding:18px 18px 18px 40px;width:100%;text-align:left;border:none;outline:0;transition:.4s;font-weight:700;font-family:Helvetica,Arial,sans-serif}.accordion.active,button.accordion:hover{background-color:#ddd}div.panel{padding:0 18px;background-color:#fff;display:none}div.panel.show{display:block}
