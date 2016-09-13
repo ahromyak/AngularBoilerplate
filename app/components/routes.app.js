@@ -62,6 +62,13 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
         templateUrl: 'app/components/design/html/index.html'
     };
 
+    var zendState = {
+        name: 'backend.zend',
+        url: '/zend',
+        controller: 'mobileController',
+        templateUrl: 'app/components/mobile/html/index.html'
+    };
+
     $stateProvider.state(homeState);
     $stateProvider.state(projectsState);
     $stateProvider.state(backendState);
@@ -70,4 +77,5 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state(cmsState);
     $stateProvider.state(designState);
     $stateProvider.state(codeigniterState);
+    $stateProvider.state(zendState);
 });
