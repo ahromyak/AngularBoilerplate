@@ -11,22 +11,23 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jsmin = require('gulp-jsmin'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    angularProtractor = require('gulp-angular-protractor');
 
 gulp.task('source-concat', function () {
     return gulp.src([
-            'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/angular/angular.min.js',
-            'node_modules/angular-animate/angular-animate.min.js',
-            'node_modules/angular-aria/angular-aria.min.js',
-            'node_modules/angular-ui-router/release/angular-ui-router.min.js',
-            'node_modules/moment/moment.js',
-            'node_modules/moment/locale/de.js',
-            'node_modules/angular-moment/angular-moment.min.js',
-            'node_modules/material-design-lite/material.min.js',
-            'assets/js/lodash.min.js',
-            'assets/js/lodash.core.min.js'
-        ])
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/angular/angular.min.js',
+        'node_modules/angular-animate/angular-animate.min.js',
+        'node_modules/angular-aria/angular-aria.min.js',
+        'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+        'node_modules/moment/moment.js',
+        'node_modules/moment/locale/de.js',
+        'node_modules/angular-moment/angular-moment.min.js',
+        'node_modules/material-design-lite/material.min.js',
+        'assets/js/lodash.min.js',
+        'assets/js/lodash.core.min.js'
+    ])
         .pipe(concat('lib.js'))
         .pipe(jsmin())
         .pipe(gulp.dest('app'));
@@ -57,3 +58,16 @@ gulp.task('make-css', function () {
         .pipe(concat('app.css'))
         .pipe(gulp.dest('assets/css'));
 });
+
+gulp.task('protractor', function () {
+    gulp.src(['/tests/*.js'])
+        .pipe(angularProtractor({
+            'configFile': 'protractor.config.js',
+            'autoStartStopServer': true,
+            'debug': false
+        }))
+        .on('error', function (e) {
+            throw e;
+        })
+});
+
