@@ -55,6 +55,13 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
         templateUrl: 'app/components/design/html/index.html'
     };
 
+    var codeigniterState = {
+        name: 'backend.codeigniter',
+        url: '/codeigniter',
+        controller: 'designController',
+        templateUrl: 'app/components/design/html/index.html'
+    };
+
     $stateProvider.state(homeState);
     $stateProvider.state(projectsState);
     $stateProvider.state(backendState);
@@ -62,4 +69,5 @@ cjs.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state(frontendtState);
     $stateProvider.state(cmsState);
     $stateProvider.state(designState);
+    $stateProvider.state(codeigniterState);
 });
