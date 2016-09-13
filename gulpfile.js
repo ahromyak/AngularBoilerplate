@@ -30,14 +30,14 @@ gulp.task('source-concat', function () {
     ])
         .pipe(concat('lib.js'))
         .pipe(jsmin())
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('assets/js/'));
 });
 
 gulp.task('make-js', function () {
     gulp.src(['main.js', 'app/**/js/*.js'])
         .pipe(concat('app.js'))
         .pipe(jsmin())
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('assets/js/'));
 });
 gulp.task('make-sourcecss', function () {
     gulp.src([
