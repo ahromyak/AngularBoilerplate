@@ -2,7 +2,7 @@
  * Created by devds on 13.09.16.
  */
 cjs.controller('cmsController',['$scope', function ($scope) {
-    $scope.mainTest = 'Hello world';
+    $scope.mainTest = 'cms Hello world';
     var dialog = document.querySelector('dialog');
     var showDialogButton = document.querySelector('#show-dialog');
     if (! dialog.showModal) {
@@ -14,6 +14,5 @@ cjs.controller('cmsController',['$scope', function ($scope) {
     dialog.querySelector('.close').addEventListener('click', function() {
         dialog.close();
     });
-
 
 }]);
