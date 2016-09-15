@@ -111,7 +111,7 @@ gulp.task('default', function() {
 
 gulp.task('concatTemplate', function () {
     return gulp.src('app/**/*.html')
-        .pipe(templateCache({root: "/app",module: 'myApp', standalone: false}))
+        .pipe(templateCache({root: "app",module: 'myApp', standalone: false}))
         .pipe(concat('template.min.js'))
         .pipe(annotate())
         .pipe(gulp.dest('assets/js'));
