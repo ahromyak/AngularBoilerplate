@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0633fee2-0383-4f3e-8827-8a722e9cc5c1" name="Default" comment="Added images and fixed errors&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/raleway.light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/raleway.regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deosgit.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+    <list default="true" id="0633fee2-0383-4f3e-8827-8a722e9cc5c1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/backend/js/backendController.js" afterPath="$PROJECT_DIR$/app/components/backend/js/backendController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/cms/js/cmsController.js" afterPath="$PROJECT_DIR$/app/components/cms/js/cmsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/design/js/designController.js" afterPath="$PROJECT_DIR$/app/components/design/js/designController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/frontend/js/frontendController.js" afterPath="$PROJECT_DIR$/app/components/frontend/js/frontendController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/home/js/homeController.js" afterPath="$PROJECT_DIR$/app/components/home/js/homeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/home/scss/home.scss" afterPath="$PROJECT_DIR$/app/components/home/scss/home.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/mobile/js/mobileController.js" afterPath="$PROJECT_DIR$/app/components/mobile/js/mobileController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/projects/js/projectsController.js" afterPath="$PROJECT_DIR$/app/components/projects/js/projectsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/source.css" afterPath="$PROJECT_DIR$/assets/css/source.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/lib.js" afterPath="$PROJECT_DIR$/assets/js/lib.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="deosgit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +31,8 @@
           <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/gulpfile.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="97" column="71" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="71" />
+                <state relative-caret-position="315">
+                  <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#45#0" expanded="false" />
                   </folding>
@@ -57,11 +40,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <file leaf-file-name="frontendController.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/components/frontend/js/frontendController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="95" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="95" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -75,6 +58,16 @@
                   <folding>
                     <element signature="e#0#45#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/components/home/scss/home.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="261">
+                  <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -140,18 +133,18 @@
         <option value="$PROJECT_DIR$/app/components/cms/html/index.html" />
         <option value="$PROJECT_DIR$/app/components/backend/html/index.html" />
         <option value="$PROJECT_DIR$/assets/css/app.css" />
-        <option value="$PROJECT_DIR$/app/components/home/scss/home.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/app/components/projects/js/projectsController.js" />
         <option value="$PROJECT_DIR$/app/components/mobile/js/mobileController.js" />
         <option value="$PROJECT_DIR$/app/components/home/js/homeController.js" />
-        <option value="$PROJECT_DIR$/app/components/frontend/js/frontendController.js" />
         <option value="$PROJECT_DIR$/app/components/design/js/designController.js" />
         <option value="$PROJECT_DIR$/app/components/cms/js/cmsController.js" />
         <option value="$PROJECT_DIR$/app/components/backend/js/backendController.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/components/home/scss/home.scss" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/components/frontend/js/frontendController.js" />
       </list>
     </option>
   </component>
@@ -879,7 +872,7 @@
       <workItem from="1473679872271" duration="621000" />
       <workItem from="1473749911380" duration="1435000" />
       <workItem from="1473840090646" duration="9477000" />
-      <workItem from="1473920506515" duration="1283000" />
+      <workItem from="1473920506515" duration="2215000" />
     </task>
     <task id="LOCAL-00001" summary="html boilerplate">
       <created>1472927993995</created>
@@ -979,15 +972,22 @@
       <option name="project" value="LOCAL" />
       <updated>1473846595036</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added gulp newer added new tasks for gulp gulp newer and gulp ng-annotate">
+      <created>1473921822675</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1473921822675</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45178000" />
+    <option name="totallyTimeSpent" value="46110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16086236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -996,7 +996,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32672232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32672232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1054,7 +1054,8 @@
     <MESSAGE value="Nested views added&#10;" />
     <MESSAGE value="Bug fix&#10;" />
     <MESSAGE value="Added images and fixed errors&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added images and fixed errors&#10;" />
+    <MESSAGE value="Added gulp newer added new tasks for gulp gulp newer and gulp ng-annotate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gulp newer added new tasks for gulp gulp newer and gulp ng-annotate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1346,14 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/home/scss/home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/routes.app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
@@ -1387,14 +1380,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/design/js/designController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/frontend/js/frontendController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
@@ -1444,20 +1429,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="95" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/home/scss/home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="97" column="71" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="71" />
+        <state relative-caret-position="315">
+          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
           <folding>
             <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+    <entry file="file://$PROJECT_DIR$/app/components/frontend/js/frontendController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="95" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="95" />
+        <state relative-caret-position="60">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
           <folding />
         </state>
       </provider>

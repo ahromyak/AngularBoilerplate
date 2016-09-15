@@ -45,6 +45,11 @@ var source = {
     ]
 };
 
+var cssDest = 'assets/css/app.css';
+var sourceCssDest = 'assets/css/source.css';
+var jsDest = 'assets/js/app.js';
+var sourceJsDest = 'assets/js/lib.js';
+
 gulp.task('protractor', function () {
     gulp.src(['/tests/*.js'])
         .pipe(angularProtractor({
@@ -59,6 +64,7 @@ gulp.task('protractor', function () {
 
 gulp.task('source-concat', function () {
     return gulp.src(source.sourceJs)
+        .pipe(newer(sourceJsDest))
         .pipe(concat('lib.js'))
         .pipe(jsmin())
         .pipe(gulp.dest('assets/js/'));
@@ -66,6 +72,7 @@ gulp.task('source-concat', function () {
 
 gulp.task('make-js', function () {
     gulp.src(source.js)
+        .pipe(newer(jsDest))
         .pipe(concat('app.js'))
         .pipe(annotate())
         .pipe(jsmin())
@@ -74,6 +81,7 @@ gulp.task('make-js', function () {
 
 gulp.task('make-sourcecss', function () {
     gulp.src(source.sourceCss)
+        .pipe(newer(sourceCssDest))
         .pipe(sass().on('error', sass.logError))
         .pipe(cssmin())
         .pipe(concat('source.css'))
@@ -82,6 +90,7 @@ gulp.task('make-sourcecss', function () {
 
 gulp.task('make-css', function () {
     gulp.src(source.css)
+        .pipe(newer(cssDest))
         .pipe(sass().on('error', sass.logError))
         .pipe(cssmin())
         .pipe(concat('app.css'))
