@@ -1,5 +1,5 @@
 {
-  "name": "corona",
+  "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -9,7 +9,6 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.2.3",
-    "dialog-polyfill": "^0.4.4",
     "gulp": "^3.9.1",
     "gulp-angular-protractor": "^0.1.4",
     "gulp-angular-templatecache": "^2.0.0",

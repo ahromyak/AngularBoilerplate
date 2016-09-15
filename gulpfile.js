@@ -33,7 +33,6 @@ var source = {
     sourceJs:[
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/angular/angular.min.js',
-        'node_modules/dialog-polyfill/dialog-polyfill.js',
         'node_modules/angular-animate/angular-animate.min.js',
         'node_modules/angular-aria/angular-aria.min.js',
         'node_modules/angular-ui-router/release/angular-ui-router.min.js',
@@ -104,11 +103,6 @@ gulp.task('watch', function() {
     gulp.watch(source.js, ['make-js']);
 });
 
-gulp.task('default', function() {
-    gulp.run('make-css', 'make-sourcecss', 'make-js', 'source-concat');
-});
-
-
 gulp.task('concatTemplate', function () {
     return gulp.src('app/**/*.html')
         .pipe(templateCache({root: "app",module: 'myApp', standalone: false}))
@@ -116,3 +110,9 @@ gulp.task('concatTemplate', function () {
         .pipe(annotate())
         .pipe(gulp.dest('assets/js'));
 });
+
+gulp.task('default', function() {
+    gulp.run('make-css', 'make-sourcecss', 'make-js', 'source-concat', 'concatTemplate');
+});
+
+

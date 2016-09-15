@@ -4,6 +4,7 @@
 var cjs = angular.module('myApp', ['ui.router']);
 
 cjs.controller('mainController', function ($scope) {
+
     var acc = document.getElementsByClassName("accordion");
     var i;
 
