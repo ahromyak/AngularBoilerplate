@@ -3,7 +3,7 @@
  */
 var cjs = angular.module('myApp', ['ui.router']);
 
-cjs.controller('mainController',['$scope', function ($scope) {
+cjs.controller('mainController', function ($scope) {
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -14,5 +14,16 @@ cjs.controller('mainController',['$scope', function ($scope) {
         }
     }
 
+    var menuList = document.getElementsByClassName("dng-hide");
+
+    for (var menu in menuList) {
+        if (!menuList.hasOwnProperty(menu)) {
+            continue;
+        }
+        menuList[menu].onclick = function(){
+            document.getElementsByClassName("panel")[0].classList.remove('show');
+        };
+    }
+
     $scope.mainTest = 'Hello world';
-}]);
+});

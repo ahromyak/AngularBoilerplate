@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Raleway2;
+  src: url(/assets/fonts/raleway.light.ttf);
+}
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   //background-color: #e0e0e0;
@@ -5,7 +9,7 @@
   cursor: pointer;
   padding: 18px;
   padding-left: 40px;
-  width: 100%;
+  //width: 100%;
   text-align: left;
   border: none;
   outline: none;
@@ -21,7 +25,7 @@
 
 /* Style the accordion panel. Note: hidden by default */
 div.panel {
-  padding: 0 18px;
+  //padding: 0 18px;
   background-color: white;
   display: none;
 }
@@ -38,4 +42,20 @@ div.panel.show {
   //background: -webkit-linear-gradient(-45deg, #ededed 10%, #d2e5e8 100%);
   background: linear-gradient(135deg, #ededed 10%, #d2e5e8 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#d2e5e8', GradientType=1) !important;
+}
+//Remove it in future and find mdl way to style it
+.mdl-mega-footer.dng-footer{
+  bottom: 0px;
+  position: absolute;
+  background: none;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link,.mdl-mega-footer{
+  color: #333;
+  font-size: 16px;
+  font-family: Raleway2;
+}
+.dng-footer div:nth-child(2) p{
+  text-decoration: underline;
+  font-weight: 800;
 }

@@ -1,3 +1,3 @@
-cjs.controller('homeController',['$scope', function ($scope) {
+cjs.controller('homeController', function ($scope) {
     $scope.mainTest = 'home Hello world';
-}]);
+});

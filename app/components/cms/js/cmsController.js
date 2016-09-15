@@ -1,7 +1,7 @@
 /**
  * Created by devds on 13.09.16.
  */
-cjs.controller('cmsController',['$scope', function ($scope) {
+cjs.controller('cmsController', function ($scope) {
     $scope.mainTest = 'cms Hello world';
     var dialog = document.querySelector('dialog');
     var showDialogButton = document.querySelector('#show-dialog');
@@ -15,4 +15,4 @@ cjs.controller('cmsController',['$scope', function ($scope) {
         dialog.close();
     });
 
-}]);
+});
