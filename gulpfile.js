@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     newer = require('gulp-newer'),
     jsmin = require('gulp-jsmin'),
     rename = require('gulp-rename'),
+    templateCache = require('gulp-angular-templatecache'),
     angularProtractor = require('gulp-angular-protractor');
 
 var source = {
@@ -105,4 +106,13 @@ gulp.task('watch', function() {
 
 gulp.task('default', function() {
     gulp.run('make-css', 'make-sourcecss', 'make-js', 'source-concat');
+});
+
+
+gulp.task('concatTemplate', function () {
+    return gulp.src('app/**/*.html')
+        .pipe(templateCache({root: "/app",module: 'myApp', standalone: false}))
+        .pipe(concat('template.min.js'))
+        .pipe(annotate())
+        .pipe(gulp.dest('assets/js'));
 });
