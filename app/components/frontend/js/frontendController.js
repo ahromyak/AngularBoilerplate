@@ -3,4 +3,6 @@
  */
 cjs.controller('frontendController', function ($scope) {
     $scope.mainTest = 'frontend Hello world controller';
+
+    $scope.name = 'Superhero';
 });

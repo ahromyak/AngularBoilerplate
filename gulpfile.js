@@ -27,8 +27,9 @@ var source = {
         'app/**/**/js/*.js'
     ],
     sourceCss:[
-    'node_modules/material-design-lite/material.min.css',
-    'node_modules/dialog-polyfill/dialog-polyfill.css'
+        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'node_modules/bootstrap/dist/css/bootstrap-theme.css',
+        'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css'
 ],
     sourceJs:[
         'node_modules/jquery/dist/jquery.min.js',
@@ -39,7 +40,9 @@ var source = {
         'node_modules/moment/moment.js',
         'node_modules/moment/locale/de.js',
         'node_modules/angular-moment/angular-moment.min.js',
-        'node_modules/material-design-lite/material.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
+        'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
         'assets/js/lodash.min.js',
         'assets/js/lodash.core.min.js'
     ]
@@ -101,6 +104,7 @@ gulp.task('make-css', function () {
 gulp.task('watch', function() {
     gulp.watch(source.css, ['make-css']);
     gulp.watch(source.js, ['make-js']);
+    gulp.watch('assets/js/template.min.js', ['concatTemplate']);
 });
 
 gulp.task('concatTemplate', function () {
