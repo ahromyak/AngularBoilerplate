@@ -1,1 +1,13 @@
-<h1>Home page</h1>
+
+<div>
+    <div ng-repeat="item in portfolio" class="col-lg-3">
+        <div class="view view-second">
+            <img src="{{item.url}}" class="text-center">
+            <div class="mask">
+                <h2>Title</h2>
+                <p>Your Text</p>
+                <a href="#" class="info">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
