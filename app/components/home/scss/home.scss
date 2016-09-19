@@ -79,6 +79,12 @@
     color: #757575;
   }
 }
+.dng-content{
+  &__img{
+    width: 240px;
+    height: 150px;
+  }
+}
 
 
 
@@ -95,10 +101,9 @@
 
 
 .view {
-  width: 300px;
-  height: 200px;
-  margin: 10px;
-  float: left;
+  width: 240px;
+  height: 150px;
+  margin: 10px auto;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -176,7 +181,7 @@
 }
 .view-second:hover .mask {
   opacity:1;
-  transform: translate(-17px,-65px) rotate(0deg);
+  transform: translate(-32px,-65px) rotate(0deg);
 }
 .view-second:hover h2 {
   transform: translate(0px,0px);
