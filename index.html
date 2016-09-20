@@ -34,36 +34,50 @@
         <!--</div>-->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-2 ">
-                    <nav class="navbar navbar-fixed-side dng-menu">
-                        <div class=""><img src="assets/images/Dengo-Logo.png">
-                        </div>
-                        <ul class="nav">
-                            <li><a ui-sref="home">Home</a></li>
-                            <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1"
-                                   aria-expanded="false">All
-                                projects</a>
-                                <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
-                                    <li><a ui-sref="backend.codeigniter">Codeigniter</a></li>
-                                    <li><a ui-sref="frontend">Zwig</a></li>
-                                    <li><a ui-sref="cms">Zend</a></li>
-                                    <li><a ui-sref="cms">Java</a></li>
-                                </ul>
-                            </li>
-                            <li><a ui-sref="mobile">Mobile</a></li>
-                            <li><a ui-sref="frontend">Frontend</a></li>
-                            <li><a ui-sref="cms">CMS</a></li>
-                            <li><a ui-sref="design">Design</a></li>
-                        </ul>
-                    </nav>
+                <!--<div class="col-xs-1 ">-->
+                <nav class="navbar navbar-fixed-side dng-menu" role="navigation">
+                    <div class="dng-logo text-center"><img src="assets/images/Dengo-Logo.png">
+                    </div>
+                    <ul class="nav ">
+                        <li><a ui-sref="home">All
+                            projects</a></li>
+                        <li class=""><a id="btn-1" data-toggle="collapse" data-target="#submenu1"
+                                        aria-expanded="false" class="dng-navigation--unempty">Backend</a>
+                            <ul class="nav collapse p-l-2" id="submenu1" role="menu" aria-labelledby="btn-1">
+                                <li><a ui-sref="backend.codeigniter">PHP</a></li>
+                                <li><a ui-sref="backend.codeigniter">Codeigniter</a></li>
+                                <li><a ui-sref="frontend">Cake PHP</a></li>
+                                <li><a ui-sref="frontend">Zwig</a></li>
+                                <li><a ui-sref="cms">Zend</a></li>
+                                <li><a ui-sref="cms">Java</a></li>
+                            </ul>
+                        </li>
+                        <li><a ui-sref="mobile">Mobile</a></li>
+                        <li><a ui-sref="frontend">Frontend</a></li>
+                        <li><a ui-sref="cms">CMS</a></li>
+                        <li><a ui-sref="design">Design</a></li>
+                    </ul>
+                    <div class="text-center dng-footer">
+                        <a href="#" class="dng-button--our-site">VISIT OUR SITE</a>
+                        <p class="dng-footer__description dng-margin--top"><b>Are you interested?<br>
+                            Move to our site</b></p>
+                    </div>
+                </nav>
+                <!--</div>-->
+                <div id="page-wrapper">
+                    <div class="page-content">
+                        <div ui-view></div>
+                    </div>
                 </div>
-                <div class="col-xs-10">
-                    <main class="">
-                        <div class="">
-                            <div ui-view></div>
-                        </div>
-                    </main>
-                </div>
+                <!--<div class="container">-->
+                    <!--<div class="col-xs-10 offset-xs-2">-->
+                        <!--<main class="">-->
+                            <!--<div class="">-->
+                                <!--<div ui-view></div>-->
+                            <!--</div>-->
+                        <!--</main>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
 
         </div>

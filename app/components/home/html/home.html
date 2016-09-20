@@ -1,12 +1,45 @@
+<div class="dng-content" ng-show="contentVisible">
 
+    <div class="dng-content__view text-center">
+
+        <div class="dng-content__header" ng-show="visibility">
+            <img src="assets/images/Big-logo.png">
+        </div>
+
+        <h2 class="dng-content__h">WE PROUDLY PRESENT</h2>
+
+        <a href="" class="dng-content__link--bordered" ng-click="contentVisible = !contentVisible">OUR PROJECTS</a>
+
+        <div class="dng-content__a">
+            <a class="" href="" ng-click="visibility = !visibility" ng-show="visibility">Who are we?</a>
+        </div>
+
+        <div ng-show="!visibility">
+            <div class="col-xs-3"></div>
+            <div class=" col-xs-3">
+                <p>Lorem ipsum orem ipsum orem ipsum orem ipsum orem ipsum orem ipsum </p>
+            </div>
+            <div class=" col-xs-3">
+                <div>
+                    <p>We are located in very heart of Europe</p>
+                </div>
+                <img src="assets/images/Map.png">
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+    </div>
+</div>
 <div>
-    <div ng-repeat="item in portfolio" class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+    <div ng-repeat="item in portfolio" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <div class="view view-second">
             <img src="{{item.url}}" class="dng-content__img">
             <div class="mask">
-                <h2>Title</h2>
-                <p>Your Text</p>
-                <a href="#" class="info">Read More</a>
+                <h4>OMG</h4>
+                <p>Backend:Codeigniter, Php</p>
+                <p>Frontend:Jquery, Bootstrap</p>
+                <p>Paralax</p>
+                <p>Mobile:Ios, Android</p>
+                <a href="#" class="info">See More</a>
             </div>
         </div>
     </div>

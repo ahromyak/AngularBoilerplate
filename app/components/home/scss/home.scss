@@ -3,59 +3,24 @@
   src: url(/assets/fonts/raleway.light.ttf);
 }
 
-///* Style the buttons that are used to open and close the accordion panel */
-//.accordion {
-//  //background-color: #e0e0e0;
-//  color: #757575;
-//  cursor: pointer;
-//  padding: 18px;
-//  padding-left: 40px;
-//  //width: 100%;
-//  text-align: left;
-//  border: none;
-//  outline: none;
-//  transition: 0.4s;
-//  font-weight: bold;
-//  font-family: Helvetica, Arial, sans-serif;
-//}
-//
-///* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-//.accordion.active, button.accordion:hover {
-//  background-color: #ddd;
-//}
-//
-///* Style the accordion panel. Note: hidden by default */
-//div.panel {
-//  //padding: 0 18px;
-//  background-color: white;
-//  display: none;
-//}
-//
-///* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-//div.panel.show {
-//  display: block;
-//}
-
 .dng-menu {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ededed+10,d2e5e8+100 */
-  //background: #ededed; /* Old browsers */
-  //background: -moz-linear-gradient(-45deg, #ededed 10%, #d2e5e8 100%);
-  //background: -webkit-linear-gradient(-45deg, #ededed 10%, #d2e5e8 100%);
   background: linear-gradient(135deg, #ededed 10%, #d2e5e8 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#d2e5e8', GradientType=1) !important;
+  padding-left: 30px;
 }
 
-//Remove it in future and find mdl way to style it
 .dng-footer {
   bottom: 0px;
   position: absolute;
   background: none;
+  margin-left: -30px;
 }
 
 .mdl-mega-footer {
   color: #333;
   font-size: 16px;
   font-family: Raleway2;
+
 }
 
 .dng-footer div:nth-child(2) p {
@@ -67,38 +32,122 @@
   position: fixed;
   margin: 0 -15px;
   height: 100vh;
-  width: inherit;
+  width: 220px;
   overflow: auto;
   border-top-width: 0;
   border-bottom-width: 0;
   border-radius: 0;
   font-weight: bold;
   font-family: Raleway2;
+  overflow-x: hidden;
 
   a {
     color: #757575;
   }
 }
-.dng-content{
-  &__img{
-    width: 240px;
-    height: 150px;
+
+.hidden {
+  display: none;
+
+}
+
+.p-l-2 {
+  padding-left: 25px;
+}
+
+.nav > li > a:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+.dng-navigation--unempty {
+  &:before {
+    content: "- ";
   }
 }
 
+.dng-logo {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 
+.navbar-fixed-side .dng-button--our-site {
+  padding: 11px 30px;
+  color: #eeeeee;
+  font-size: 11px;
+  background: #52929E;
+  box-shadow: 1px 1px 5px #89D3CD;
+  font-weight: bold;
+  font-family: Raleway2;
+}
 
+.dng-footer__description {
+  font-size: 12px;
+  color: #b7b7b7;
+}
 
+.dng-margin--top {
+  margin-top: 25px;
+}
 
+.dng-footer {
+  position: absolute;
+  bottom: 0px;
+  width: inherit;
+}
 
+#page-wrapper {
+  position: relative;
+  margin: 0 0 0 250px;
+  padding: 0;
+}
 
+.dng-content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333333+0,62a1ad+100 */
+  background: #333333; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #333333 0%, #62a1ad 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #333333 0%, #62a1ad 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #333333 0%, #62a1ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#62a1ad', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+  position: fixed;
+  z-index: 1;
+  opacity: 0.95;
+  top: 0px;
+  right: 0px;
+  left: 205px;
+  bottom: 0px;
 
+  &__view {
+    color: #ffffff;
+    a {
+      color: #ffffff;
+    }
+  }
 
-
-
-
-
-
+  &__header {
+    padding-top: 160px;
+  }
+  &__h {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+  &__a {
+    margin: 160px 0px;
+    margin-bottom: 10px;
+  }
+  &__img {
+    width: 240px;
+    height: 150px;
+  }
+  &__link {
+    &--bordered {
+      padding: 15px 60px;
+      border: 1px solid #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
 
 .view {
   width: 240px;
@@ -109,6 +158,7 @@
   text-align: center;
   cursor: default;
 }
+
 .view .mask, .view .content {
   width: 300px;
   height: 200px;
@@ -117,10 +167,12 @@
   top: 0;
   left: 0
 }
+
 .view img {
   display: block;
   position: relative
 }
+
 .view h2 {
   text-transform: uppercase;
   color: #fff;
@@ -131,6 +183,7 @@
   background: rgba(0, 0, 0, 0.8);
   margin: 20px 0 0 0
 }
+
 .view p {
   font-family: Georgia, serif;
   font-style: italic;
@@ -140,23 +193,25 @@
   padding: 10px 20px 20px;
   text-align: center
 }
+
 .view a.info {
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
-  background: #000;
   color: #fff;
   text-transform: uppercase;
-  box-shadow: 0 0 1px #000
 }
+
 .view a.info:hover {
-  box-shadow: 0 0 5px #000
+  text-decoration: underline;
 }
+
 .view-second img {
   transition: all 0.2s ease-in;
 }
+
 .view-second .mask {
-  background-color: rgba(115,146,184, 0.7);
+  background-color: rgba(115, 146, 184, 0.7);
   width: 300px;
   padding: 60px;
   height: 300px;
@@ -164,6 +219,7 @@
   transform: translate(265px, 145px) rotate(45deg);
   transition: all 0.2s ease-in-out;
 }
+
 .view-second h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   background: transparent;
@@ -171,27 +227,48 @@
   transform: translate(200px, -200px);
   transition: all 0.2s ease-in-out;
 }
+
 .view-second p {
   transform: translate(-200px, 200px);
   transition: all 0.2s ease-in-out;
 }
+
 .view-second a.info {
   transform: translate(0px, 100px);
   transition: all 0.2s 0.1s ease-in-out;
 }
+
 .view-second:hover .mask {
-  opacity:1;
-  transform: translate(-32px,-65px) rotate(0deg);
+  opacity: 1;
+  transform: translate(-32px, -65px) rotate(0deg);
 }
+
 .view-second:hover h2 {
-  transform: translate(0px,0px);
+  transform: translate(0px, 0px);
   transition-delay: 0.3s;
 }
+
 .view-second:hover p {
-  transform: translate(0px,0px);
+  transform: translate(0px, 0px);
   transition-delay: 0.4s;
 }
+
 .view-second:hover a.info {
-  transform: translate(0px,0px);
+  transform: translate(0px, 0px);
   transition-delay: 0.5s;
+}
+
+.mask {
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+  h4 {
+    margin-bottom: 0px;
+    color: #fff;
+  }
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background: none;
 }

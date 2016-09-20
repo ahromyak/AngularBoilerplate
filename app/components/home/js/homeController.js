@@ -26,5 +26,28 @@ cjs.controller('homeController', function ($scope) {
             'name':'pic-2'},
         {'url':'assets/images/pic-13.jpg',
             'name':'pic-2'},
+        {'url':'assets/images/pic-6.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-7.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-8.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-9.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-10.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-11.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-12.jpg',
+            'name':'pic-2'},
+        {'url':'assets/images/pic-13.jpg',
+            'name':'pic-2'},
     ];
+    $scope.visibility = true;
+    $scope.contentVisible = true;
+
+    $scope.show = function(){
+        console.log('ok');
+        $scope.visibility = !$scope.visibility;
+    };
 });
