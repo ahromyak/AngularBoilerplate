@@ -2,45 +2,62 @@
 
     <div class="dng-content__view text-center">
 
-        <div class="dng-content__header" ng-show="visibility">
+        <div class="dng-content__header dng-transition " ng-class="{'hideToTop': toggleInput}">
             <img src="assets/images/Big-logo.png">
         </div>
 
-        <h2 class="dng-content__h">WE PROUDLY PRESENT</h2>
+        <div class="dng-transition" ng-class="{'showInTop': toggleInput}">
 
-        <a href="" class="dng-content__link--bordered" ng-click="contentVisible = !contentVisible">OUR PROJECTS</a>
+            <h2 class="dng-content__h">WE PROUDLY PRESENT</h2>
 
-        <div class="dng-content__a">
-            <a class="" href="" ng-click="visibility = !visibility" ng-show="visibility">Who are we?</a>
+            <a href="" class="dng-content__link--bordered" ng-click="contentVisible = !contentVisible">OUR PROJECTS</a>
+
+            <div class="dng-content__a" ng-show="!areaStatus">
+                <label id="toggle" ng-click="move();"></label>
+            </div>
         </div>
 
-        <div ng-show="!visibility">
-            <div class="col-xs-3"></div>
-            <div class=" col-xs-3">
-                <p>Lorem ipsum orem ipsum orem ipsum orem ipsum orem ipsum orem ipsum </p>
+        <div class="dng-container--footer dng-transition" ng-class="{'showInBottom': toggleInput}">
+
+            <div class="col-xs-6  col-md-3 col-md-offset-3 text-left">
+
+                <h4 class="">DENGO systems</h4>
+                <p>We design and develop web & mobile application</p>
+                <p>Our goal is to bring all your dreams to life.
+                    Just joking, not all. IT-projects only. But we make it realy awesome.</p>
+                <p>As the company with more than 3 years of experience.
+                    Dengo Systems is not afraid of difficult and ambitious
+                    projects. We have experience working with client from 36 countries all over
+                    the globe.</p>
             </div>
-            <div class=" col-xs-3">
-                <div>
-                    <p>We are located in very heart of Europe</p>
-                </div>
+
+            <div class="col-xs-6  col-md-3">
+
+                <p>We are located in very heart of Europe</p>
                 <img src="assets/images/Map.png">
             </div>
-            <div class="col-xs-3"></div>
         </div>
     </div>
 </div>
 <div>
     <div ng-repeat="item in portfolio" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
         <div class="view view-second">
+
             <img src="{{item.url}}" class="dng-content__img">
+
             <div class="mask">
+
                 <h4>OMG</h4>
                 <p>Backend:Codeigniter, Php</p>
                 <p>Frontend:Jquery, Bootstrap</p>
                 <p>Paralax</p>
                 <p>Mobile:Ios, Android</p>
-                <a href="#" class="info">See More</a>
+                <a ng-click="toggleModal(item);" data-href="" class="info cursor">See More</a>
             </div>
         </div>
     </div>
 </div>
+
+<modal-dialog-content show='modalShown' item-data='itemData' class="dng-modal-dialog" width='85%' height='90%' modal-catalog>
+</modal-dialog-content>

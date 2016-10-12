@@ -1,0 +1,12 @@
+<div class="ng-modal" ng-show="show">
+    <div class="ng-modal-overlay" ng-click="hideModal()">
+        <div class="ng-modal-close" ng-click="hideModal()">X</div>
+    </div>
+
+    <div class="ng-modal-dialog" ng-style="dialogStyle">
+        <div class="ng-modal-dialog-content">
+            <span style="color: #fff">{{itemData.link}}</span>
+            <iframe ng-src="" data-href="{{itemData.link}}" class="dng-portfolio__img" ></iframe>
+        </div>
+    </div>
+</div>

@@ -9,40 +9,22 @@
 <body ng-app="myApp">
 <div ng-controller="mainController">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
-        <!--<div class="mdl-layout__drawer nav-bar&#45;&#45;gradient">-->
-        <!--<p></p>-->
-        <!--<span class="mdl-layout-title"><img src="assets/images/Dengo-Logo.png"></span>-->
-        <!--<nav class="mdl-navigation">-->
-        <!--<p></p>-->
-        <!--<a class="mdl-navigation__link dng-hide" ui-sref="home"><b>All projects</b></a>-->
-        <!--<div class="accordion mdl-navigation__link">Backend</div>-->
-        <!--<div class="panel">-->
-        <!--<a class="mdl-navigation__link" ui-sref="backend.codeigniter"><b>Codeigniter</b></a>-->
-        <!--<a class="mdl-navigation__link" ui-sref="frontend"><b>Zwig</b></a>-->
-        <!--<a class="mdl-navigation__link" ui-sref="cms"><b>Zend</b></a>-->
-        <!--<a class="mdl-navigation__link" ui-sref="java"><b>Java</b></a>-->
-        <!--</div>-->
-        <!--<a class="mdl-navigation__link dng-hide" ui-sref="mobile"><b>Mobile</b></a>-->
-        <!--<a class="mdl-navigation__link dng-hide" ui-sref="frontend"><b>Frontend</b></a>-->
-        <!--<a class="mdl-navigation__link dng-hide" ui-sref="cms"><b>CMS</b></a>-->
-        <!--<a class="mdl-navigation__link dng-hide" ui-sref="design"><b>Design</b></a>-->
-        <!--</nav>-->
-        <!--<div class="mdl-mega-footer dng-footer">-->
-        <!--<div><p>Are you interested? Move to our site.</p></div>-->
-        <!--<div><p >Dengo-systems.com</p></div>-->
-        <!--</div>-->
-        <!--</div>-->
         <div class="container-fluid">
             <div class="row">
-                <!--<div class="col-xs-1 ">-->
                 <nav class="navbar navbar-fixed-side dng-menu" role="navigation">
-                    <div class="dng-logo text-center"><img src="assets/images/Dengo-Logo.png">
+                    <div class="dng-logo text-center">
+                        <img src="assets/images/Dengo-Logo.png">
                     </div>
-                    <ul class="nav ">
-                        <li><a ui-sref="home">All
-                            projects</a></li>
-                        <li class=""><a id="btn-1" data-toggle="collapse" data-target="#submenu1"
-                                        aria-expanded="false" class="dng-navigation--unempty">Backend</a>
+                    <ul class="nav dng-navigation--left">
+                        <li>
+                            <a ui-sref="home">All projects</a>
+                        </li>
+                        <li class="">
+                            <a id="btn-1"
+                               data-toggle="collapse"
+                               data-target="#submenu1"
+                               aria-expanded="false"
+                               class="dng-navigation--unempty">Backend</a>
                             <ul class="nav collapse p-l-2" id="submenu1" role="menu" aria-labelledby="btn-1">
                                 <li><a ui-sref="backend.codeigniter">PHP</a></li>
                                 <li><a ui-sref="backend.codeigniter">Codeigniter</a></li>
@@ -59,25 +41,15 @@
                     </ul>
                     <div class="text-center dng-footer">
                         <a href="#" class="dng-button--our-site">VISIT OUR SITE</a>
-                        <p class="dng-footer__description dng-margin--top"><b>Are you interested?<br>
-                            Move to our site</b></p>
+                        <p class="dng-footer__description dng-margin--top">
+                            <b>Are you interested?<br> Move to our site</b></p>
                     </div>
                 </nav>
-                <!--</div>-->
                 <div id="page-wrapper">
                     <div class="page-content">
                         <div ui-view></div>
                     </div>
                 </div>
-                <!--<div class="container">-->
-                    <!--<div class="col-xs-10 offset-xs-2">-->
-                        <!--<main class="">-->
-                            <!--<div class="">-->
-                                <!--<div ui-view></div>-->
-                            <!--</div>-->
-                        <!--</main>-->
-                    <!--</div>-->
-                <!--</div>-->
             </div>
 
         </div>

@@ -19,12 +19,15 @@ var gulp = require('gulp'),
 
 var source = {
     css:[
-        'app/**/scss/*.scss'
+        'main.scss',
+        'app/**/scss/*.scss',
+        'app/components/directives/*.scss'
     ],
     js:[
         'main.js',
         'app/components/routes.app.js',
-        'app/**/**/js/*.js'
+        'app/**/**/js/*.js',
+        'app/components/directives/*.js'
     ],
     sourceCss:[
         'node_modules/bootstrap/dist/css/bootstrap.min.css',
@@ -104,7 +107,7 @@ gulp.task('make-css', function () {
 gulp.task('watch', function() {
     gulp.watch(source.css, ['make-css']);
     gulp.watch(source.js, ['make-js']);
-    gulp.watch('assets/js/template.min.js', ['concatTemplate']);
+    gulp.watch('app/**/*.html', ['concatTemplate']);
 });
 
 gulp.task('concatTemplate', function () {

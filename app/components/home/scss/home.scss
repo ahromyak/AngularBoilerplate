@@ -1,19 +1,7 @@
-@font-face {
-  font-family: Raleway2;
-  src: url(/assets/fonts/raleway.light.ttf);
-}
-
 .dng-menu {
   background: linear-gradient(135deg, #ededed 10%, #d2e5e8 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#d2e5e8', GradientType=1) !important;
   padding-left: 30px;
-}
-
-.dng-footer {
-  bottom: 0px;
-  position: absolute;
-  background: none;
-  margin-left: -30px;
 }
 
 .mdl-mega-footer {
@@ -46,16 +34,11 @@
   }
 }
 
-.hidden {
-  display: none;
-
-}
-
 .p-l-2 {
   padding-left: 25px;
 }
 
-.nav > li > a:hover {
+.dng-navigation--left > li > a:hover {
   background: none;
   text-decoration: underline;
 }
@@ -66,10 +49,6 @@
   }
 }
 
-.dng-logo {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
 
 .navbar-fixed-side .dng-button--our-site {
   padding: 11px 30px;
@@ -86,10 +65,6 @@
   color: #b7b7b7;
 }
 
-.dng-margin--top {
-  margin-top: 25px;
-}
-
 .dng-footer {
   position: absolute;
   bottom: 0px;
@@ -98,7 +73,7 @@
 
 #page-wrapper {
   position: relative;
-  margin: 0 0 0 250px;
+  margin: 0 0 0 210px;
   padding: 0;
 }
 
@@ -116,6 +91,7 @@
   right: 0px;
   left: 205px;
   bottom: 0px;
+  font-family: Raleway2;
 
   &__view {
     color: #ffffff;
@@ -148,127 +124,62 @@
     }
   }
 }
-
-.view {
-  width: 240px;
-  height: 150px;
-  margin: 10px auto;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
+.dng-transition{
+  transition-property: transform;
+  transition-duration: 1s;
+}
+.dng-container--footer {
+  padding:5em 3em;
+  transform: translate3d(0px, 500px, 0px);
 }
 
-.view .mask, .view .content {
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0
+.hideToTop{
+  transform: translate3d(0px, -500px, 0px);
+}
+.showInTop{
+  transform: translate3d(0px, -210px, 0px);
+}
+.showInBottom{
+  transform: translate3d(0px, -310px, 0px);
 }
 
-.view img {
-  display: block;
-  position: relative
+.dngMovetopSmall{
+  transform: translateY(-290px);
 }
-
-.view h2 {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  margin: 20px 0 0 0
+.cursor{
+  cursor: pointer;
 }
-
-.view p {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 12px;
-  position: relative;
-  color: #fff;
-  padding: 10px 20px 20px;
-  text-align: center
-}
-
-.view a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.view a.info:hover {
-  text-decoration: underline;
-}
-
-.view-second img {
-  transition: all 0.2s ease-in;
-}
-
-.view-second .mask {
-  background-color: rgba(115, 146, 184, 0.7);
-  width: 300px;
-  padding: 60px;
-  height: 300px;
-  opacity: 0;
-  transform: translate(265px, 145px) rotate(45deg);
-  transition: all 0.2s ease-in-out;
-}
-
-.view-second h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  background: transparent;
-  margin: 20px 40px 0px 40px;
-  transform: translate(200px, -200px);
-  transition: all 0.2s ease-in-out;
-}
-
-.view-second p {
-  transform: translate(-200px, 200px);
-  transition: all 0.2s ease-in-out;
-}
-
-.view-second a.info {
-  transform: translate(0px, 100px);
-  transition: all 0.2s 0.1s ease-in-out;
-}
-
-.view-second:hover .mask {
-  opacity: 1;
-  transform: translate(-32px, -65px) rotate(0deg);
-}
-
-.view-second:hover h2 {
-  transform: translate(0px, 0px);
-  transition-delay: 0.3s;
-}
-
-.view-second:hover p {
-  transform: translate(0px, 0px);
-  transition-delay: 0.4s;
-}
-
-.view-second:hover a.info {
-  transform: translate(0px, 0px);
-  transition-delay: 0.5s;
-}
-
-.mask {
-  p {
-    margin: 0px;
-    padding: 0px;
-  }
-  h4 {
-    margin-bottom: 0px;
-    color: #fff;
+#toggle{
+  cursor:pointer;
+  width: 100px;
+  border-radius: 3px;
+  color: #FFF;
+  line-height:20px;
+  font-size:12px;
+  text-align:center;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  transition:all 500ms ease;
+  &:hover{
+    text-decoration: underline;
   }
 }
 
-.nav > li > a:focus, .nav > li > a:hover {
-  background: none;
+label:after {
+  content:"Who are we?"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
