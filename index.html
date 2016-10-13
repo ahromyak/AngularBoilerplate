@@ -12,42 +12,129 @@
         <div class="container-fluid">
             <div class="row">
                 <nav class="navbar navbar-fixed-side dng-menu" role="navigation">
-                    <div class="dng-logo text-center">
-                        <img src="assets/images/Dengo-Logo.png">
+                    <div ng-show="!modalShown">
+                        <div class="dng-logo text-center">
+                            <img src="assets/images/Dengo-Logo.png">
+                        </div>
+                        <ul class="nav dng-navigation--left">
+                            <li>
+                                <a href="" ng-click="setSelectedItem(); contentVisible = true">All projects</a>
+                            </li>
+                            <li class="">
+                                <a id="btn-1"
+                                   data-toggle="collapse"
+                                   data-target="#submenu1"
+                                   aria-expanded="false"
+                                   ng-click="unemptyMenu = !unemptyMenu"
+                                   ng-class='{"dng-navigation--unempty":unemptyMenu==true}'>Backend</a>
+                                <ul class="nav collapse p-l-2" id="submenu1" role="menu" aria-labelledby="btn-1">
+                                    <li><a href="" ng-click="setSelectedItem(1); contentVisible = false">PHP</a></li>
+                                    <li><a href="" ng-click="setSelectedItem(2); contentVisible = false">Codeigniter</a>
+                                    </li>
+                                    <li><a href="" ng-click="setSelectedItem(3); contentVisible = false">Cake PHP</a>
+                                    </li>
+                                    <li><a href="" ng-click="setSelectedItem(4); contentVisible = false">Zwig</a></li>
+                                    <li><a href="" ng-click="setSelectedItem(5); contentVisible = false">Zend</a></li>
+                                    <li><a href="" ng-click="setSelectedItem(6); contentVisible = false">Java</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" ng-click="setSelectedItem(7); contentVisible = false">Mobile</a></li>
+                            <li><a href="" ng-click="setSelectedItem(8); contentVisible = false">Frontend</a></li>
+                            <li><a href="" ng-click="setSelectedItem(9); contentVisible = false">CMS</a></li>
+                            <li><a href="" ng-click="setSelectedItem(10); contentVisible = false">Design</a></li>
+                        </ul>
+                        <div class="text-center dng-footer">
+                            <a href="#" class="dng-button--our-site">VISIT OUR SITE</a>
+                            <p class="dng-footer__description dng-margin--top">
+                                <b>Are you interested?<br> Move to our site</b></p>
+                        </div>
                     </div>
-                    <ul class="nav dng-navigation--left">
-                        <li>
-                            <a ui-sref="home">All projects</a>
-                        </li>
-                        <li class="">
-                            <a id="btn-1"
-                               data-toggle="collapse"
-                               data-target="#submenu1"
-                               aria-expanded="false"
-                               class="dng-navigation--unempty">Backend</a>
-                            <ul class="nav collapse p-l-2" id="submenu1" role="menu" aria-labelledby="btn-1">
-                                <li><a ui-sref="backend.codeigniter">PHP</a></li>
-                                <li><a ui-sref="backend.codeigniter">Codeigniter</a></li>
-                                <li><a ui-sref="frontend">Cake PHP</a></li>
-                                <li><a ui-sref="frontend">Zwig</a></li>
-                                <li><a ui-sref="cms">Zend</a></li>
-                                <li><a ui-sref="cms">Java</a></li>
-                            </ul>
-                        </li>
-                        <li><a ui-sref="mobile">Mobile</a></li>
-                        <li><a ui-sref="frontend">Frontend</a></li>
-                        <li><a ui-sref="cms">CMS</a></li>
-                        <li><a ui-sref="design">Design</a></li>
-                    </ul>
-                    <div class="text-center dng-footer">
-                        <a href="#" class="dng-button--our-site">VISIT OUR SITE</a>
-                        <p class="dng-footer__description dng-margin--top">
-                            <b>Are you interested?<br> Move to our site</b></p>
+                    <div ng-show="modalShown" class="dng-pading--top-120">
+                        <span class="dng-title__descript">Project</span>
+                        <h4 class="h3"><b>{{itemData.title}}</b></h4>
+                        <p class="dng-margin--bottom">{{itemData.desc}}</p>
+                        <span class="dng-title__descript">Services</span>
+                        <h4 class="h3"><b>Backend</b></h4>
+                        <p>{{itemData.backend}}</p>
+                        <h4 class="h3"><b>Frontend</b></h4>
+                        <p>{{itemData.frontend}}</p>
+                        <h4 class="h3"><b>Mobile</b></h4>
+                        <p class="dng-margin--bottom">{{itemData.mobile}}</p>
+                        <div class="text-center dng-row">
+                            <a href="{{itemData.link}}" class="dng-margin--top">{{itemData.name}}</a>
+                        </div>
                     </div>
                 </nav>
                 <div id="page-wrapper">
                     <div class="page-content">
-                        <div ui-view></div>
+                        <!--Uncomment if using ui-router to show views for each path-->
+                        <!--<div ui-view></div>-->
+                        <div class="dng-content" ng-show="contentVisible">
+
+                            <div class="dng-content__view text-center">
+
+                                <div class="dng-content__header dng-transition " ng-class="{'hideToTop': toggleInput}">
+                                    <img src="assets/images/Big-logo.png">
+                                </div>
+
+                                <div class="dng-transition" ng-class="{'showInTop': toggleInput}">
+
+                                    <h2 class="dng-content__h">WE PROUDLY PRESENT</h2>
+
+                                    <a href="" class="dng-content__link--bordered"
+                                       ng-click="contentVisible = !contentVisible">OUR PROJECTS</a>
+
+                                    <div class="dng-content__a" ng-show="!areaStatus">
+                                        <label id="toggle" ng-click="move();"></label>
+                                    </div>
+                                </div>
+
+                                <div class="dng-container--footer dng-transition"
+                                     ng-class="{'showInBottom': toggleInput}">
+
+                                    <div class="col-xs-6  col-md-3 col-md-offset-3 text-left">
+
+                                        <h4 class="">DENGO systems</h4>
+                                        <p>We design and develop web & mobile application</p>
+                                        <p>Our goal is to bring all your dreams to life.
+                                            Just joking, not all. IT-projects only. But we make it realy awesome.</p>
+                                        <p>As the company with more than 3 years of experience.
+                                            Dengo Systems is not afraid of difficult and ambitious
+                                            projects. We have experience working with client from 36 countries all over
+                                            the globe.</p>
+                                    </div>
+
+                                    <div class="col-xs-6  col-md-3">
+                                        <p>We are located in very heart of Europe</p>
+                                        <img src="assets/images/Map.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div ng-repeat="item in portfolioFiltered = (portfolio | portfolioFilter:selectedItem)"
+                                 class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+
+                                <div class="view view-second">
+
+                                    <img src="{{item.url}}" class="dng-content__img">
+
+                                    <div class="mask">
+
+                                        <h4>{{item.title}}</h4>
+                                        <p>Backend:{{item.backend}}</p>
+                                        <p>Frontend:{{item.frontend}}</p>
+                                        <p>Mobile:{{item.mobile}}</p>
+                                        <a ng-click="toggleModal(item);" class="info cursor">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <modal-dialog-content show='modalShown' item-data='itemData' class="dng-modal-dialog"
+                                              width='85%' height='100%' modal-catalog>
+                        </modal-dialog-content>
+
                     </div>
                 </div>
             </div>

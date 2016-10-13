@@ -25,6 +25,7 @@ var source = {
     ],
     js:[
         'main.js',
+        'app/components/filters.js',
         'app/components/routes.app.js',
         'app/**/**/js/*.js',
         'app/components/directives/*.js'
