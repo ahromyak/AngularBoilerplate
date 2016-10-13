@@ -24,10 +24,6 @@ cjs.directive('modalDialogContent', function () {
                 scope.show = false;
                 bodyTag.removeClass('dng-disable-scroll');
             };
-            // element.bind('load', function() {
-            //     scope.$apply();
-            // });
-
         },
         templateUrl: 'app/components/directives/modalDialogContentView.html'
     };

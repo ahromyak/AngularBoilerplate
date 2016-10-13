@@ -113,7 +113,7 @@
 }
 
 .dng-disable-scroll{
-    overflow-y: hidden;
+    //overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -344,6 +344,15 @@ h4 {
 label:after {
     content:"Who are we?"
 }
+
 .dng-row{
     margin-left: -25px;
+}
+
+.dng-modal-dialog{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 205px;
 }
