@@ -5,6 +5,11 @@
     <title>Dengo Systems</title>
     <link href="assets/css/source.css" rel="stylesheet" media="all">
     <link href="assets/css/app.css" rel="stylesheet" media="all">
+    <!--<link rel="icon" href="icon.png" type="image/x-icon"/>-->
+    <link rel="icon"
+          type="image/png"
+          href="icon.png" />
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon"/>
 </head>
 <body ng-app="myApp">
 <div ng-controller="mainController">
@@ -92,7 +97,7 @@
                                 <div class="dng-container--footer dng-transition"
                                      ng-class="{'showInBottom': toggleInput}">
 
-                                    <div class="col-xs-6  col-md-3 col-md-offset-3 text-left">
+                                    <div class="col-xs-6 col-md-4 col-md-offset-2 text-left">
 
                                         <h4 class="">DENGO systems</h4>
                                         <p>We design and develop web & mobile application</p>
@@ -104,7 +109,7 @@
                                             the globe.</p>
                                     </div>
 
-                                    <div class="col-xs-6  col-md-3">
+                                    <div class="col-xs-6  col-md-4">
                                         <p>We are located in very heart of Europe</p>
                                         <img src="assets/images/Map.png">
                                     </div>
@@ -113,11 +118,11 @@
                         </div>
                         <div>
                             <div ng-repeat="item in portfolioFiltered = (portfolio | portfolioFilter:selectedItem)"
-                                 class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                                 class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
                                 <div class="view view-second">
 
-                                    <img src="{{item.url}}" class="dng-content__img">
+                                    <img ng-src="{{item.url}}" class="dng-content__img">
 
                                     <div class="mask">
 

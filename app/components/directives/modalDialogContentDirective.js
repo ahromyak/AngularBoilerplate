@@ -12,9 +12,10 @@ cjs.directive('modalDialogContent', function () {
 
         },
         link: function (scope, element, attrs) {
+
             var bodyTag = angular.element( document.querySelector('body') );
             bodyTag.addClass('dng-disable-scroll');
-
+            element.height(window.innerHeight);
             scope.dialogStyle = {};
             if (attrs.width)
                 scope.dialogStyle.width = attrs.width;

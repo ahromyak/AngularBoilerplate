@@ -1,3 +1,11 @@
+@media screen and ( max-height: 700px ) {
+    .nav.dng-navigation--left{
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+}
+
 @font-face {
     font-family: Raleway2;
     src: url(/assets/fonts/raleway.light.ttf);
@@ -163,7 +171,7 @@ h4 {
     position: absolute;
     background: none;
     margin-left: -30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -278,7 +286,7 @@ h4 {
         margin-bottom: 40px;
     }
     &__a {
-        margin: 160px 0px;
+        margin: 50px 0px;
         margin-bottom: 10px;
     }
     &__img {
@@ -302,7 +310,7 @@ h4 {
 
 .dng-container--footer {
     padding:5em 3em;
-    transform: translate3d(0px, 500px, 0px);
+    transform: translate3d(0px, 1200px, 0px);
 }
 
 .hideToTop{
@@ -314,7 +322,7 @@ h4 {
 }
 
 .showInBottom{
-    transform: translate3d(0px, -310px, 0px);
+    transform: translate3d(0px, -270px, 0px);
 }
 
 .dngMovetopSmall{
